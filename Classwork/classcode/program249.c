@@ -1,0 +1,43 @@
+// A    E   I   O   U
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int countVowelsX(char *str)
+{
+
+    int iCount = 0;
+
+    while(*str != '\0')
+    {
+        if((*str == 'A') || (*str == 'E') || (*str == 'I') ||  (*str == 'O') || (*str == 'U'))
+        {
+
+        iCount++;
+        
+        }
+        str++;
+
+    }
+    return iCount;
+}
+
+
+
+
+int main()
+{
+    char Arr[100] = {'\0'};
+    int iRet = 0;
+
+    printf("enter string : \n");
+    scanf("%[^'\n']s",Arr);
+
+    iRet = countVowelsX(Arr);
+
+    printf("freqvency of vowels is : %d\n",iRet);
+
+
+
+    return EXIT_SUCCESS;
+}
