@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+
+class Arithmatic
+{
+  public:
+    double No1;
+    double No2;
+    
+    Arithmatic(double A, double B)
+    {
+        No1 = A;
+        No2 = B;
+
+    }
+
+    double Addition()
+    {
+        double Ans;
+        Ans = No1 + No2;
+        return Ans;
+    }
+
+    int Substraction()
+    {
+        double Ans;
+        Ans = No1 - No2;
+        return Ans;
+    }
+
+
+};
+
+int main()
+{
+    Arithmatic *aobj = NULL;    //error
+    aobj = new Arithmatic(11,10);   //error
+
+    cout<<aobj->Addition()<<endl;
+    
+    
+
+
+
+    return EXIT_SUCCESS;
+}
